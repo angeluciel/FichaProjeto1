@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link href="https://getbootstrap.com/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="./script/script.js"></script>
+
+    <title>FichaUm</title>
+</head>
+
+<body>
+
+    <main>
+
+        <header>
+            <div>
+                <h2> A DnD Sheet by Luciel</h2>
+            </div>
+            <div class="Row1">
+                <div class="CharName">
+                <input type="text" placeholder="Character's Name">
+            </div>
+            <div class="PlayerName">
+                <input type="text" placeholder="Player's Name">
+            </div>
+            <div></div>
+
+            </div>
+
+            <div class="Alignment">
+                <label for="alignments">Alignment</label>
+                    <select name="alignments" id="alignments">
+                        <option value="LE">LE</option>
+                        <option value="LN">LN</option>
+                        <option value="LG">LG</option>
+                    </select>
+                </div>
+            </div>
+        </header>
+
+        <div class="containter">
+            
+            <div class="row">
+
+                <div class="col-4">
+
+                    <table class="table">
+                        <tr>
+                            <th class="Atributos">Atributos</th>
+                            <th class="Valores">Valores</th>
+                            <th class="Modificador">Modificador</th>
+                        </tr>
+                        <tr class="rosa">
+                            <td>Força</td>
+                            <td><input type="number" placeholder="10" id="strScore" onchange="updateModifier('strScore', 'strMod')"></td>
+                            <td><input type="number" placeholder="0" id="strMod" readonly></td>
+                        </tr>
+
+                        <tr class="rosa">
+                            <td>Destreza</td>
+                            <td><input type="number" placeholder="10" id="dexScore" onchange="updateModifier('dexScore', 'dexMod')"></td>
+                            <td><input type="number" placeholder="0" id="dexMod" readonly></td>
+                        </tr>
+
+                        <tr class="rosa">
+                            <td>Constituição</td>
+                            <td><input type="number" placeholder="10" id="conScore" onchange="updateModifier('conScore', 'conMod')"></td>
+                            <td><input type="number" placeholder="0" id="conMod" readonly></td>
+                        </tr>
+
+                        <tr class="rosa">
+                            <td>Sabedoria</td>
+                            <td><input type="number" placeholder="10" id="wisScore" onchange="updateModifier('wisScore', 'wisMod')"></td>
+                            <td><input type="number" placeholder="0" id="wisMod" readonly></td>
+                        </tr>
+
+                        <tr class="rosa">
+                            <td>Inteligência</td>
+                            <td><input type="number" placeholder="10" id="intScore" onchange="updateModifier('intScore', 'intMod')"></td>
+                            <td><input type="number" placeholder="0" id="intMod" readonly></td>
+                        </tr>
+
+                        <tr class="rosa">
+                            <td>Carisma</td>
+                            <td><input type="number" placeholder="10" id="chaScore" onchange="updateModifier('chaScore', 'chaMod')"></td>
+                            <td><input type="number" placeholder="0" id="chaMod" readonly></td>
+                        </tr>
+                    </table>
+
+                    </div>
+
+                    <div class="col-4 dois">
+
+                            <h2 id="pl">Player Level</h2>
+
+                            <br>
+                            <div class="roseta">
+                                <input type="Number" placeholder="1" id="lvl" min="1" max="20" onchange="updateProf()">
+                            </div>
+                        </div>
+
+                            <div class="col-4">
+
+                                <h2>Proficiency Bonus</h2>
+
+                                <br>
+
+                                <input type="number" placeholder="2" id="profBonus" readonly>
+             </div>
+
+           </div>
+
+      </div>
+
+   </main>
+ 
+</body>
+</html>
